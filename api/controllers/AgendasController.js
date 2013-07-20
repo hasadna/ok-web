@@ -11,7 +11,7 @@ module.exports = {
     "use strict";
 
     Agenda.find().done(function(err, agendas){
-      res.view({agendas: agendas});
+      res.view({agendas: (agendas || [])});
     });
 
   },

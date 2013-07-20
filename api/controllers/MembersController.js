@@ -11,15 +11,16 @@ module.exports = {
     "use strict";
 
     Member.find().done(function(err, members){
-      res.view({members: members});
+      res.view({members: (members || []) });
     });
 
   },
 
   find: function(req, res){
     "use strict";
-    Member.find({id: req.param('id')}).done(function(err, member){
-      res.view({member: member[0]});
+
+    Member.find({id: req.param('id')}).done(function(err, members){
+      res.view({member: members[0]});
     });
 
   }
