@@ -34,7 +34,10 @@ module.exports.adapters = {
     host: 'oknesset.org',
     port: 80,
     protocol: 'http',
-    pathname: '/api/v2'
+    pathname: '/api/v2',
+    cache: {
+      engine: require('./lru-cache')
+    }
   },
 
   // MySQL is the world's most popular relational database.
