@@ -9,12 +9,6 @@
 module.exports = {
 
   attributes: {
-    absolute_url: 'string',
-    description: 'string',
-    id: 'integer',
-    name: 'string',
-    public_owner_name: 'string',
-    resource_uri: 'string'
   }
 
 };
