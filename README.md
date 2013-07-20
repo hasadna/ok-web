@@ -67,5 +67,3 @@ You can add additional scripts in your views by using Jade blocks. If you look i
 append scripts
   script(src="somewhere")
 ```
-
-Routes are URL patterns that map to controller actions
