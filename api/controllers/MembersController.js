@@ -1,5 +1,5 @@
 /**
- * AgendasController
+ * MembersController
  *
  * @module		:: Controller
  * @description	:: Contains logic for handling requests.
@@ -10,18 +10,18 @@ module.exports = {
   index: function (req, res) {
     "use strict";
 
-    Agenda.find().done(function(err, agendas){
-      res.view({agendas: agendas});
+    Member.find().done(function(err, members){
+      res.view({members: members});
     });
 
   },
 
   find: function(req, res){
     "use strict";
-
-    Agenda.find({id: req.param('id')}).done(function(err, agenda){
-      res.view({agenda: agenda});
+    Member.find({id: req.param('id')}).done(function(err, member){
+      res.view({member: member[0]});
     });
 
   }
+
 };

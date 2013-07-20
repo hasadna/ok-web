@@ -6,9 +6,15 @@ head
   link(rel="stylesheet", href="/linker/styles/app.css")
   // STYLES END
 body
+
+  include includes/header
+
   block body
 
+  include includes/footer
+
   block scripts
+    // Append scripts in child templates with `append scripts`
     // SCRIPTS
     script(type="text/javascript", src="/linker/js/socket.io.js")
     script(type="text/javascript", src="/linker/js/sails.io.js")

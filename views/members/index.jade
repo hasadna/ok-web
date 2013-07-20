@@ -1,0 +1,13 @@
+extends ../layout
+
+block body
+  section
+    header
+      h1 Members
+    - if(members.length > 0)
+      ul.members
+        - each member in members
+          li.member
+            p
+              strong Name -
+              a(href='/members/' + member.id)= member.name
